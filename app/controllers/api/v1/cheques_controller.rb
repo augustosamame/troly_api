@@ -20,7 +20,7 @@ module Api
         @cheque = Cheque.new(cheque_params)
 
         if @cheque.save
-          render json: ChequeSerializer.new(@cheque).serialized_json, status: :created, location: @cheque
+          render json: ChequeSerializer.new(@cheque).serialized_json, status: :created
         else
           render json: @cheque.errors, status: :unprocessable_entity
         end
