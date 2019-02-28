@@ -18,7 +18,7 @@ module Api
       # POST /cheques
       def create
         @cheque = Cheque.new(cheque_params)
-
+        @cheque.date = Date.strptime(cheque_params[:date], '%d-%m-%y')
         if @cheque.save
           render json: ChequeSerializer.new(@cheque).serialized_json, status: :created
         else
