@@ -1,7 +1,7 @@
 # README
 
 Troly API for technical challenge
-This API will serve React frontend found here:
+This API will serve React frontend found here: https://github.com/augustosamame/troly_app
 
 * Ruby version 2.5.1
 
